@@ -31,13 +31,10 @@ let degreeSeries n m =
 
 
 let findNumber list number =
-    let rec findNumberInner tail =
-        if List.length tail = 0
-            then -1 
-        else
-            if List.head tail = number
-                then (List.length list - List.length tail) 
-                else (findNumberInner (List.tail tail))
-    findNumberInner list
+    let rec findNumberInner list pos =
+        match list with
+        | [] -> None
+        | hd :: tl -> if hd = number then Some(pos) else findNumberInner tl (pos + 1)
+    findNumberInner list 0
 
-printfn "%A" (degreeSeries 3 3)
+printfn "%A" (findNumber [ 1; 2; 3] 3)
