@@ -5,7 +5,7 @@
     factorialInner n 1
 
 let fibonacci n =
-    if n < 0 then (invalidArg "n" "Negative not expected")
+    if n <= 0 then (invalidArg "n" "Positive expected")
     let rec fibonacciInner n acc1 acc2 =
         if n = 1 then acc1 else fibonacciInner (n - 1) acc2 (acc1 + acc2)
     fibonacciInner n 0 1  
