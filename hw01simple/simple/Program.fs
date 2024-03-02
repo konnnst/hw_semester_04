@@ -12,9 +12,11 @@ let fibonacci n =
 
 
 let reverseList list =
-    let rec reverseListInner result pos =
-        if pos = List.length list then result else reverseListInner (List.item pos list :: result) (pos + 1)
-    reverseListInner [] 0
+    let rec reverseListInner acc list =
+        match list with
+        | [] -> acc 
+        | hd :: tail -> reverseListInner (hd :: acc) tail
+    reverseListInner [] list
 
 let degreeSeries n m =
     if n < 0 then invalidArg "n" "n should be positive"
@@ -35,4 +37,4 @@ let findNumber list number =
         | hd :: tl -> if hd = number then Some(pos) else findNumberInner tl (pos + 1)
     findNumberInner list 0
 
-printfn "%A" (findNumber [ 1; 2; 3] 3)
+printfn "%A" (reverseList [])
