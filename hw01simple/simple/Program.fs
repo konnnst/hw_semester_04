@@ -1,4 +1,6 @@
-﻿let factorial n  =
+﻿module simple
+
+let factorial n  =
     if n < 0 then (invalidArg "n" "Negative not expected")
     let rec factorialInner n acc =
         if n = 0 then acc else factorialInner (n - 1) (acc * n) 
