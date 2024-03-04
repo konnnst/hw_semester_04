@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Compile Include="CountEven.fs" />
+    <Compile Include="PrimeSequence.fs" />
   </ItemGroup>
 
 </Project>

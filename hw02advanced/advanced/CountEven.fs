@@ -1,4 +1,6 @@
-﻿let listCountEvenMap list =
+﻿module even
+
+let listCountEvenMap list =
     list |> List.map (fun x -> (x + 1) % 2) |> List.sum
 
 let listCountEvenFilter list =
