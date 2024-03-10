@@ -2,7 +2,7 @@
 
 let listCountEvenMap list =
     list |> List.map (fun x -> (x + 1) % 2) |> List.sum
-
+    
 let listCountEvenFilter list =
     list |> List.filter (fun x -> x % 2 = 0) |> List.length
 
