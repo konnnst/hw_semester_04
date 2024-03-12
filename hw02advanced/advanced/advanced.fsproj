@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="CountEven.fs" />
+    <Compile Include="CountEvens.fs" />
     <Compile Include="PrimeSequence.fs" />
   </ItemGroup>
 

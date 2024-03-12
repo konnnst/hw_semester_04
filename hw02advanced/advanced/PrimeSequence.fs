@@ -1,3 +1,5 @@
+module prime
+
 open System
 
 let isPrime num =

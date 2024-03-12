@@ -9,7 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="EvensCount.fs" />
+    <Compile Include="CountEvensTest.fs" />
+    <Compile Include="PrimeSequenceTest.fs" />
   </ItemGroup>
 
   <ItemGroup>

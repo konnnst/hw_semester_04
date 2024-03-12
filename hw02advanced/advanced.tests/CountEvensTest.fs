@@ -1,3 +1,5 @@
+module countEvensTest
+
 open FsCheck
 open FsUnit
 open NUnit.Framework
