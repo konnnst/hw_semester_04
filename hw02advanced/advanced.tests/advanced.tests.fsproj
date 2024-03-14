@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="CountEvensTest.fs" />
     <Compile Include="PrimeSequenceTest.fs" />
+    <Compile Include="TreeParseTest.fs" />
   </ItemGroup>
 
   <ItemGroup>
