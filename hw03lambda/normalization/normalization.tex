@@ -9,7 +9,9 @@
 \begin{document}
 \subsection*{Term normalization}
 % ((λa.(λb.b b) (λb.b b)) b) ((λc.(c b)) (λa.a))
-\( ((\lambda a .(\lambda b . b\ b)\ (\lambda b . b\ b))\ b)\ ((\lambda c .(c\ b))\ (\lambda a.a)) \Leftrightarrow \)
+\( ((\lambda a .(\lambda b . b\ b)\ (\lambda b . b\ b))\ b)\ ((\lambda c .(c\ b))\ (\lambda a.a)) \Leftrightarrow (\lambda b.b\ b)\ (\lambda b . b\ b)\ ((\lambda c .(c\ b))\ (\lambda a.a))\)
+On this step we can note, that we should apply disconverging combinator to get to the next step. It will reply on all succeeding steps and we will not get normal form of this term using normal reduction strategy.\\
+Using \textit{Curry theorem about normalization} we can tell, that this term hasn't normal form.
 \subsection*{S K K = I proof}
 $K = \lambda x\ y.x$\\
 $S = \lambda x\ y\ z.x\ z\ (y\ z)$\\
