@@ -1,0 +1,18 @@
+\documentclass[12 pt, a4paper]{article}
+\usepackage[warn]{ mathtext }
+\usepackage[russian,english]{babel}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\begin{document}
+\subsection*{Term normalization}
+% ((λa.(λb.b b) (λb.b b)) b) ((λc.(c b)) (λa.a))
+\( ((\lambda a .(\lambda b . b\ b)\ (\lambda b . b\ b))\ b)\ ((\lambda c .(c\ b))\ (\lambda a.a)) \Leftrightarrow \)
+\subsection*{S K K = I proof}
+$K = \lambda x\ y.x$\\
+$S = \lambda x\ y\ z.x\ z\ (y\ z)$\\
+$S K K = (\lambda x\ y\ z.x\ z\ (y\ z))\ (\lambda x\ y.x)\ (\lambda x\ y.x) = (\lambda x.\lambda y.\lambda z.x\ z\ (y\ z))\ (\lambda x\ y.x)\ (\lambda x\ y.x) \rightarrow_\beta (\lambda y.\lambda z.(\lambda a\ b.a)\ z\ (y\ z))\ (\lambda x\ y.x)\rightarrow_\beta \lambda z.(\lambda a\ b.a)\ z\ ((\lambda a\ b.a)\ z) = \lambda z.(\lambda a.\lambda b.a)\ z\ ((\lambda a.\lambda b.a)\ z) \rightarrow_\beta  \lambda z.\lambda b.z\ ((\lambda a.\lambda b.a)\ z \rightarrow_\beta  \lambda z.\lambda b.z\ \lambda b.z \rightarrow_\beta  \lambda z.z = I$ 
+\end{document}
+
