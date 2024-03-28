@@ -1,0 +1,9 @@
+func0 x l = List.map (fun y -> y * x) l
+eta-transformation =>
+func1 x  = List.map (fun y -> y * x)
+<=>
+func2 x = List.map (fun y -> (*) x y)
+eta-transformation =>
+func3 x = List.map (*) x 
+eta-transformation =>
+func4 = List.map << (*)
